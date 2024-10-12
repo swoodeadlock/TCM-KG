@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCM Knowledge Graph</title>
+    <!-- Include the Mermaid.js library -->
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</head>
+<body>
+    <h1>Three Levels of TCM Doctors Knowledge Graph</h1>
+    <!-- Mermaid container -->
+    <div class="mermaid">
+        graph TD;
+        A[Superior Doctor (Shàng gōng, 上工)] -->|Focuses on Prevention| B[Prevents Disease];
+        A -->|90% Success Rate| C[Success Rate (90%)];
+        A -->|Knows Disease Transmission| D[Disease Transmission Knowledge];
+
+        E[Mediocre Doctor (Zhōng gōng, 中工)] -->|Reactive Treatment| F[Treats Manifested Diseases];
+        E -->|70% Success Rate| G[Success Rate (70%)];
+
+        H[Inferior Doctor (Xià gōng, 下工)] -->|Symptomatic Treatment| I[Treats Symptoms];
+        H -->|60% Success Rate| J[Success Rate (60%)];
+        H -->|Basic Understanding| K[Symptom Treatment];
+    </div>
+</body>
+</html>
