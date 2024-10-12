@@ -4,59 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TCM Doctors and Health Wisdom Knowledge Graph</title>
-    <!-- Load Mermaid.js from CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-    <script>
-        mermaid.initialize({ startOnLoad: true });
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.13.10/mermaid.min.js"></script>
 </head>
 <body>
     <h1>TCM Doctors and Cultural Health Wisdom Knowledge Graph</h1>
     <div class="mermaid">
-        graph TD;
+        graph TD
+        A[Preventive Health]
         
-        %% Central Node - Preventive Health %%
-        A[Preventive Health] 
+        %% Levels of TCM Doctors
+        A -->|Practices| B["Superior Doctor (Shàng gōng)"]
+        A -->|Practices| C["Mediocre Doctor (Zhōng gōng)"]
+        A -->|Practices| D["Inferior Doctor (Xià gōng)"]
         
-        %% Levels of TCM Doctors %%
-        A -->|Practices| B[Superior Doctor (Shàng gōng, 上工)];
-        A -->|Practices| C[Mediocre Doctor (Zhōng gōng, 中工)];
-        A -->|Practices| D[Inferior Doctor (Xià gōng, 下工)];
+        %% Relationships for Superior Doctor
+        B -->|Draws from| E["Huang Di Nei Jing: Treat before illness"]
+        B -->|Focuses on| F[Preventive Care]
+        B -->|Knows| G["Disease Transmission Knowledge"]
+        B -->|Has| H["Success Rate (90%)"]
         
-        %% Relationships for Superior Doctor %%
-        B -->|Draws from| E["Huang Di Nei Jing: Treat before illness"];
-        B -->|Focuses on| F[Preventive Care];
-        B -->|Knows| G[Disease Transmission Knowledge];
-        B -->|Has| H[Success Rate (90%)];
-
-        %% Relationships for Mediocre Doctor %%
-        C -->|Draws from| I["Reactive Treatment"];
-        C -->|Treats| J[Manifested Disease];
-        C -->|Has| K[Success Rate (70%)];
-
-        %% Relationships for Inferior Doctor %%
-        D -->|Focuses on| L[Symptom Treatment];
-        D -->|Has| M[Success Rate (60%)];
-
-        %% Cultural Wisdom Section %%
-        A -->|Shares Insight| N[Cultural Wisdom (Chinese & Maltese Proverbs)];
-        N -->|Focuses on| O[Preventive Health Proverbs];
-        N -->|Focuses on| P[Moderation in Eating];
-        N -->|Focuses on| Q[Peaceful Mind and Routine];
-
-        %% Proverbs from Chinese and Maltese cultures %%
-        P -->|Chinese Proverb| R["Eating less can live longer"];
-        P -->|Maltese Proverb| S["He who eats too much dies young"];
-
-        Q -->|Chinese Wisdom| T["Balance Yin and Yang"];
-        Q -->|Maltese Proverb| U["Start work early, sleep well at night"];
-
-        %% Classical Text Relationships %%
-        E -->|Root Concept| A;
-        O -->|Shared Wisdom| N;
-
-        %% Shared Cultural Insights %%
-        N -->|Cultural Connection| V["Chinese-Maltese Connection"];
+        %% Relationships for Mediocre Doctor
+        C -->|Draws from| I["Reactive Treatment"]
+        C -->|Treats| J["Manifested Disease"]
+        C -->|Has| K["Success Rate (70%)"]
+        
+        %% Relationships for Inferior Doctor
+        D -->|Focuses on| L["Symptom Treatment"]
+        D -->|Has| M["Success Rate (60%)"]
+        
+        %% Cultural Wisdom Section
+        A -->|Shares Insight| N["Cultural Wisdom (Chinese & Maltese Proverbs)"]
+        N -->|Focuses on| O["Preventive Health Proverbs"]
+        N -->|Focuses on| P["Moderation in Eating"]
+        N -->|Focuses on| Q["Peaceful Mind and Routine"]
+        
+        %% Proverbs from Chinese and Maltese cultures
+        P -->|Chinese Proverb| R["Eating less can live longer"]
+        P -->|Maltese Proverb| S["He who eats too much dies young"]
+        Q -->|Chinese Wisdom| T["Balance Yin and Yang"]
+        Q -->|Maltese Proverb| U["Start work early, sleep well at night"]
+        
+        %% Classical Text Relationships
+        E -->|Root Concept| A
+        O -->|Shared Wisdom| N
+        
+        %% Shared Cultural Insights
+        N -->|Cultural Connection| V["Chinese-Maltese Connection"]
     </div>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            flowchart: { useMaxWidth: false }
+        });
+    </script>
 </body>
 </html>
