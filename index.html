@@ -2,59 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TCM Doctors and Health Wisdom Knowledge Graph</title>
+    <title>TCM Knowledge Graph - Centralized Hub</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.13.10/mermaid.min.js"></script>
 </head>
 <body>
-    <h1>TCM Doctors and Cultural Health Wisdom Knowledge Graph</h1>
+    <h1>Traditional Chinese Medicine (TCM) Knowledge Graph - Centralized Hub</h1>
     <div class="mermaid">
-        graph TD
-        A[Preventive Health]
-        
-        %% Levels of TCM Doctors
-        A -->|Practices| B["Superior Doctor (Shàng gōng)"]
-        A -->|Practices| C["Mediocre Doctor (Zhōng gōng)"]
-        A -->|Practices| D["Inferior Doctor (Xià gōng)"]
-        
-        %% Relationships for Superior Doctor
-        B -->|Draws from| E["Huang Di Nei Jing: Treat before illness"]
-        B -->|Focuses on| F[Preventive Care]
-        B -->|Knows| G["Disease Transmission Knowledge"]
-        B -->|Has| H["Success Rate (90%)"]
-        
-        %% Relationships for Mediocre Doctor
-        C -->|Draws from| I["Reactive Treatment"]
-        C -->|Treats| J["Manifested Disease"]
-        C -->|Has| K["Success Rate (70%)"]
-        
-        %% Relationships for Inferior Doctor
-        D -->|Focuses on| L["Symptom Treatment"]
-        D -->|Has| M["Success Rate (60%)"]
-        
-        %% Cultural Wisdom Section
-        A -->|Shares Insight| N["Cultural Wisdom (Chinese & Maltese Proverbs)"]
-        N -->|Focuses on| O["Preventive Health Proverbs"]
-        N -->|Focuses on| P["Moderation in Eating"]
-        N -->|Focuses on| Q["Peaceful Mind and Routine"]
-        
-        %% Proverbs from Chinese and Maltese cultures
-        P -->|Chinese Proverb| R["Eating less can live longer"]
-        P -->|Maltese Proverb| S["He who eats too much dies young"]
-        Q -->|Chinese Wisdom| T["Balance Yin and Yang"]
-        Q -->|Maltese Proverb| U["Start work early, sleep well at night"]
-        
-        %% Classical Text Relationships
-        E -->|Root Concept| A
-        O -->|Shared Wisdom| N
-        
-        %% Shared Cultural Insights
-        N -->|Cultural Connection| V["Chinese-Maltese Connection"]
+        graph LR
+        classDef entity fill:#f9f,stroke:#333,stroke-width:2px;
+        classDef principle fill:#ffc,stroke:#333,stroke-width:2px;
+
+        %% Central Node
+        OP1[Doctor Classification]:::principle
+
+        %% Doctor Nodes
+        OP1 --> B[Superior Doctor]:::entity
+        OP1 --> C[Mediocre Doctor]:::entity
+        OP1 --> D[Inferior Doctor]:::entity
+
+        %% Superior Doctor Connections
+        B -->|Draws from| E[Huang Di Nei Jing]:::entity
+        B -->|Focuses on| F[Preventive Care]:::entity
+        B -->|Knows| G[Disease Transmission]:::entity
+        B -->|"Success Rate: 90%"| B
+
+        %% Mediocre Doctor Connections
+        C -->|Applies| I[Reactive Treatment]:::entity
+        C -->|Treats| J[Manifested Disease]:::entity
+        C -->|"Success Rate: 70%"| C
+
+        %% Inferior Doctor Connections
+        D -->|Focuses on| L[Symptom Treatment]:::entity
+        D -->|"Success Rate: 60%"| D
+
+        %% Treatment Approach
+        OP2[Treatment Approach]:::principle
+        OP1 --> OP2
+        OP2 --> F
+        OP2 --> I
+        OP2 --> L
+
+        %% Cultural Health Wisdom
+        OP3[Cultural Health Wisdom]:::principle
+        OP1 --> OP3
+        OP3 --> N[Cultural Wisdom]:::entity
+        N -->|Includes| P[Moderation in Eating]:::entity
+        N -->|Includes| Q[Peaceful Mind and Routine]:::entity
+        P -->|Example| R[Chinese Proverb]:::entity
+        P -->|Example| S[Maltese Proverb]:::entity
+        Q -->|Concept| T[Yin and Yang]:::entity
+        N -->|Represents| V[Chinese-Maltese Connection]:::entity
     </div>
     <script>
         mermaid.initialize({
             startOnLoad: true,
-            flowchart: { useMaxWidth: false }
+            flowchart: { useMaxWidth: false },
+            theme: 'neutral'
         });
     </script>
 </body>
