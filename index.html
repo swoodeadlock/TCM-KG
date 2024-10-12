@@ -3,28 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TCM Knowledge Graph</title>
-    <!-- Include the Mermaid.js library -->
+    <title>TCM Doctors and Health Wisdom Knowledge Graph</title>
     <script type="module">
         import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
         mermaid.initialize({ startOnLoad: true });
     </script>
 </head>
 <body>
-    <h1>Three Levels of TCM Doctors Knowledge Graph</h1>
-    <!-- Mermaid container -->
+    <h1>TCM Doctors and Cultural Health Wisdom Knowledge Graph</h1>
     <div class="mermaid">
         graph TD;
-        A["Superior Doctor (Shàng gōng, 上工)"] -->|Focuses on Prevention| B["Prevents Disease"];
-        A -->|90% Success Rate| C["Success Rate (90%)"];
-        A -->|Knows Disease Transmission| D["Disease Transmission Knowledge"];
+        %% Central Node - Preventive Health %%
+        A[Preventive Health] 
+        
+        %% Levels of TCM Doctors %%
+        A -->|Practices| B[Superior Doctor (Shàng gōng)]
+        A -->|Practices| C[Mediocre Doctor (Zhōng gōng)]
+        A -->|Practices| D[Inferior Doctor (Xià gōng)]
+        
+        %% Relationships for Superior Doctor %%
+        B -->|Draws from| E["Huang Di Nei Jing: Treat before illness"]
+        B -->|Focuses on| F[Preventive Care]
+        B -->|Knows| G[Disease Transmission Knowledge]
+        B -->|Has| H[Success Rate (90%)]
 
-        E["Mediocre Doctor (Zhōng gōng, 中工)"] -->|Reactive Treatment| F["Treats Manifested Diseases"];
-        E -->|70% Success Rate| G["Success Rate (70%)"];
+        %% Relationships for Mediocre Doctor %%
+        C -->|Draws from| I["Reactive Treatment"]
+        C -->|Treats| J[Manifested Disease]
+        C -->|Has| K[Success Rate (70%)]
 
-        H["Inferior Doctor (Xià gōng, 下工)"] -->|Symptomatic Treatment| I["Treats Symptoms"];
-        H -->|60% Success Rate| J["Success Rate (60%)"];
-        H -->|Basic Understanding| K["Symptom Treatment"];
+        %% Relationships for Inferior Doctor %%
+        D -->|Focuses on| L[Symptom Treatment]
+        D -->|Has| M[Success Rate (60%)]
+
+        %% Cultural Wisdom Section %%
+        A -->|Shares Insight| N[Cultural Wisdom (Chinese & Maltese Proverbs)]
+        N -->|Focuses on| O[Preventive Health Proverbs]
+        N -->|Focuses on| P[Moderation in Eating]
+        N -->|Focuses on| Q[Peaceful Mind and Routine]
+
+        %% Proverbs from Chinese and Maltese cultures %%
+        P -->|Chinese Proverb| R["Eating less can live longer"]
+        P -->|Maltese Proverb| S["He who eats too much dies young"]
+
+        Q -->|Chinese Wisdom| T["Balance Yin and Yang"]
+        Q -->|Maltese Proverb| U["Start work early, sleep well at night"]
+
+        %% Classical Text Relationships %%
+        E -->|Root Concept| A
+        O -->|Shared Wisdom| N
+
+        %% Shared Cultural Insights %%
+        N -->|Cultural Connection| V["Chinese-Maltese Connection"]
     </div>
 </body>
 </html>
