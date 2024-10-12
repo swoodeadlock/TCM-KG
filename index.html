@@ -13,48 +13,50 @@
     <h1>TCM Doctors and Cultural Health Wisdom Knowledge Graph</h1>
     <div class="mermaid">
         graph TD;
+        
         %% Central Node - Preventive Health %%
         A[Preventive Health] 
         
         %% Levels of TCM Doctors %%
-        A -->|Practices| B[Superior Doctor (Shàng gōng)]
-        A -->|Practices| C[Mediocre Doctor (Zhōng gōng)]
-        A -->|Practices| D[Inferior Doctor (Xià gōng)]
+        A -->|Practices| B[Superior Doctor (Shàng gōng, 上工)];
+        A -->|Practices| C[Mediocre Doctor (Zhōng gōng, 中工)];
+        A -->|Practices| D[Inferior Doctor (Xià gōng, 下工)];
         
         %% Relationships for Superior Doctor %%
-        B -->|Draws from| E["Huang Di Nei Jing: Treat before illness"]
-        B -->|Focuses on| F[Preventive Care]
-        B -->|Knows| G[Disease Transmission Knowledge]
-        B -->|Has| H[Success Rate (90%)]
+        B -->|Draws from| E["Huang Di Nei Jing: Treat before illness"];
+        B -->|Focuses on| F[Preventive Care];
+        B -->|Knows| G[Disease Transmission Knowledge];
+        B -->|Has| H[Success Rate (90%)];
 
         %% Relationships for Mediocre Doctor %%
-        C -->|Draws from| I["Reactive Treatment"]
-        C -->|Treats| J[Manifested Disease]
-        C -->|Has| K[Success Rate (70%)]
+        C -->|Draws from| I["Reactive Treatment"];
+        C -->|Treats| J[Manifested Disease];
+        C -->|Has| K[Success Rate (70%)];
 
         %% Relationships for Inferior Doctor %%
-        D -->|Focuses on| L[Symptom Treatment]
-        D -->|Has| M[Success Rate (60%)]
+        D -->|Focuses on| L[Symptom Treatment];
+        D -->|Has| M[Success Rate (60%)];
 
         %% Cultural Wisdom Section %%
-        A -->|Shares Insight| N[Cultural Wisdom (Chinese & Maltese Proverbs)]
-        N -->|Focuses on| O[Preventive Health Proverbs]
-        N -->|Focuses on| P[Moderation in Eating]
-        N -->|Focuses on| Q[Peaceful Mind and Routine]
+        A -->|Shares Insight| N[Cultural Wisdom (Chinese & Maltese Proverbs)];
+        N -->|Focuses on| O[Preventive Health Proverbs];
+        N -->|Focuses on| P[Moderation in Eating];
+        N -->|Focuses on| Q[Peaceful Mind and Routine];
 
         %% Proverbs from Chinese and Maltese cultures %%
-        P -->|Chinese Proverb| R["Eating less can live longer"]
-        P -->|Maltese Proverb| S["He who eats too much dies young"]
+        P -->|Chinese Proverb| R["Eating less can live longer"];
+        P -->|Maltese Proverb| S["He who eats too much dies young"];
 
-        Q -->|Chinese Wisdom| T["Balance Yin and Yang"]
-        Q -->|Maltese Proverb| U["Start work early, sleep well at night"]
+        Q -->|Chinese Wisdom| T["Balance Yin and Yang"];
+        Q -->|Maltese Proverb| U["Start work early, sleep well at night"];
 
         %% Classical Text Relationships %%
-        E -->|Root Concept| A
-        O -->|Shared Wisdom| N
+        E -->|Root Concept| A;
+        O -->|Shared Wisdom| N;
 
         %% Shared Cultural Insights %%
-        N -->|Cultural Connection| V["Chinese-Maltese Connection"]
+        N -->|Cultural Connection| V["Chinese-Maltese Connection"];
     </div>
 </body>
 </html>
+
